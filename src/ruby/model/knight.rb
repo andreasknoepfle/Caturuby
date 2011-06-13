@@ -1,8 +1,12 @@
-class Knight < Figure
-    def validate_move offset_x,offset_y
-      move = super
-      more_horizontal = (offset_x.abs == 2 && offset_y.abs ==1)
-      more_vertical = (offset_x.abs == 1 && offset_y.abs == 2)
-      move && (more_horizontal || more_vertical)
-    end
+module Model
+  class Knight < Figure
+      def name
+        "knight"
+      end
+      def validate_move move
+        more_horizontal = (move.offset_row.abs == 2 && move.offset_col.abs ==1)
+        more_vertical = (move.offset_row.abs == 1 && move.offset_col.abs == 2)
+        more_horizontal || more_vertical
+      end
+  end
 end
