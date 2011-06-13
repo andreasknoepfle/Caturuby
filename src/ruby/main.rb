@@ -1,10 +1,16 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
 require 'java'
+
+#Load Ruby Gems & Libs
+require 'lib/ruby/loadpath'
+
+require 'require_all'
+
+require_all 'src/ruby/model'
 
 class Main
   def initialize
-      puts java.lang.String.new "test"
+    chess=Chessboard.new
+    
   end
 end
 
