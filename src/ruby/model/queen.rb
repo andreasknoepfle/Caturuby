@@ -1,0 +1,2 @@
+class Queen < Figure
+end
