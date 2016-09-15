@@ -1,9 +1,11 @@
 module View
   class ResizeComponentListener
     include Swing::ComponentListener
-    def initialize resizeable
-      @resizeable=resizeable
+
+    def initialize(resizeable)
+      @resizeable = resizeable
     end
+
     def componentResized(e)
       component = e.get_source
       dimensions = component.get_size
@@ -17,7 +19,7 @@ module View
       @resizeable.set_size(framesize,framesize)
       #center
       @resizeable.set_location((dimensions.get_width-framesize)/2,(dimensions.get_height-framesize)/2)
-      @resizeable.validateTree
+      @resizeable.validate
     end
   end
 end
