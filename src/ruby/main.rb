@@ -1,7 +1,7 @@
 require 'java'
 
 #Load Ruby Gems & Libs
-require 'lib/ruby/loadpath'
+require './lib/ruby/loadpath'
 
 require 'require_all'
 
@@ -12,9 +12,9 @@ module Swing
 end
 
 
- require_all 'src/ruby/model'
- require_all 'src/ruby/view'
- require_all 'src/ruby/controller'
+require_all './src/ruby/model'
+require_all './src/ruby/view'
+require_all './src/ruby/controller'
 
 class Main
   def initialize
