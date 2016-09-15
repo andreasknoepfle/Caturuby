@@ -69,7 +69,7 @@ module Model
       @fields.map! { Array.new 8 }
       for i in 0..7 do
         case i
-        when 0,7:
+        when 0,7
             @fields[0][i]=Rook.new Figure::BLACK
             @fields[7][i]=Rook.new Figure::WHITE
         when 1,6
